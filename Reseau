@@ -1,0 +1,15 @@
+Serveur TCP: --> gérer des clients
+Socket serevice: recevoir la requete --> accepte --> Socket service: représente la communication avec 1 client
+
+Gérer 1 client:
+    - écoute
+    - comprendre
+    - métier (la réponse)
+    - formuler
+    - envoie
+    - close (sss.close, ssg.close)
+comprendre + métier + formuler = Gérer 1 demande --> ListeAuth.ListeAuth
+
+inversion contrôle:
+
+multi client: threat
