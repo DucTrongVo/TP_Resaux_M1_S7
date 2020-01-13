@@ -11,14 +11,22 @@ import java.net.DatagramSocket;
 import java.net.Socket;
 import java.net.SocketException;
 
+/**
+ * Classe qui représente un serveur UDP
+ */
 public class ServeurUDP extends Thread{
   private ListeAuth la;
   private boolean haveAdditionalRight;
   private JsonLogger logger;
-  public ServeurUDP(ListeAuth la, boolean haveAdditionalRight, JsonLogger logger){
+
+  /**
+   * constructeur de la classe
+   * @param la : la liste d'authentification
+   * @param haveAdditionalRight : booléan qui implique si un client possède d'autre droit que CHECK
+   */
+  public ServeurUDP(ListeAuth la, boolean haveAdditionalRight){
     this.la = la;
     this.haveAdditionalRight = haveAdditionalRight;
-    this.logger = logger;
   }
   public void run(){
     try {

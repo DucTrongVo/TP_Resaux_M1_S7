@@ -13,7 +13,7 @@ public class Main {
     // Initialiser un serveur TCP
     ServeurTCP tcp = new ServeurTCP(la,false);
     // Initialiser un serveur udp
-    ServeurUDP udp = new ServeurUDP(la,false,null);
+    ServeurUDP udp = new ServeurUDP(la,false);
     // Initialiser un serveur tcp avec numéro de port défini
     ServeurTCPM tcpm = new ServeurTCPM(la,28415,true);
 

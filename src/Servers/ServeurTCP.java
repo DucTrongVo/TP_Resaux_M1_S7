@@ -11,6 +11,11 @@ public class ServeurTCP extends Thread{
   private ListeAuth la;
   private boolean haveAdditionalRight;
 
+  /**
+   * Constructeur de la classe représente un serveur TCP
+   * @param la : la liste d'authentification
+   * @param haveAdditionalRight : booléan qui implique si un client possède d'autre droit que CHECK
+   */
   public ServeurTCP(ListeAuth la,boolean haveAdditionalRight){
     this.la = la;
     this.haveAdditionalRight = haveAdditionalRight;
@@ -40,20 +45,5 @@ public class ServeurTCP extends Thread{
   
   public void run(){
     this.runServeur();
-//    try {
-//      // Création d'un socket serveur générique sur le port 40000
-//      ServerSocket ssg = new ServerSocket(40000);
-//      
-//      while(true) {
-//        // On attend une connexion puis on l'accepte
-//        Socket sss = ssg.accept();
-//        System.out.println("Connect to client TCP Checker : " + sss);
-//        
-//        Gerer1Client g1c = new Gerer1Client(sss, la, "TCP", haveAdditionalRight);
-//        g1c.start();
-//      }
-//    } catch (IOException e) {
-//      e.printStackTrace();
-//    }
   }
 }

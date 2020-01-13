@@ -6,6 +6,9 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.util.Scanner;
 
+/**
+ * Classe représente un client UDP
+ */
 public class ClientUDP{
 
 	public static void main(String[] args) throws Exception {

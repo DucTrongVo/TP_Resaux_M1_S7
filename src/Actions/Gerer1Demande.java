@@ -7,15 +7,25 @@ import java.util.Arrays;
 
 
 public class Gerer1Demande extends Thread{
+  /**
+   * La classe qui traite les demandes du clients
+   * @param la : variable représente la listeAuthentification
+   * @param haveAdditionalRight : variable de type booléan qui est vrai si c'est un client Manager, false si non
+   * @param proto : protocol utilisé par le client
+   * @param listeRequetes : array qui contient les requetes standard prédéfinis (des mots clés)
+   * @param stringToLog : string qui contient les informations pour logger
+   */
   private ListeAuth la;
   private String proto;
   private boolean haveAdditionalRight;
   private static ArrayList<String> listeRequetes = new ArrayList<String>(Arrays.asList("CHK","ADD","DEL","MOD","FIN")); // Liste des mots clés d'actions
   private String stringToLog = "";
+
   /**
-   * La classe qui traite les demandes du clients
-   * @param la : variable représente la listeAuthentification
-   * @param haveAdditionalRight : variable de type booléan qui est vrai si c'est un client Manager, false si non
+   * constructor de la classe
+   * @param la
+   * @param proto
+   * @param haveAdditionalRight
    */
   public Gerer1Demande (ListeAuth la, String proto, boolean haveAdditionalRight){
     this.la = la;
@@ -23,6 +33,11 @@ public class Gerer1Demande extends Thread{
     this.proto = proto;
   }
 
+  /**
+   * Fonction qui retourne un String en résultat de la demande du client
+   * @param requete demande du client
+   * @return String qui contient le résultat du demande client
+   */
   public String travail(String requete) {
     // Initialiser une variable locale qui contiendra la réponse pour le client
     String res = null;

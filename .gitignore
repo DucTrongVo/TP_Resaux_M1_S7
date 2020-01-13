@@ -1,3 +1,5 @@
 /.idea
 
 /out
+# Fichier de Log
+Log.txt

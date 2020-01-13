@@ -6,6 +6,9 @@ import java.io.PrintStream;
 import java.net.Socket;
 import java.util.Scanner;
 
+/**
+ * Classe représente un client TCP
+ */
 public class ClientTCP  {
 	public static void main(String args[]) throws Exception {
 	// Création d'un socket client et connexion avec un serveur fonctionnant sur la même machine et sur le port 40000

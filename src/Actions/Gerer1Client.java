@@ -61,7 +61,7 @@ public class Gerer1Client extends Thread{
 
           PrintStream sortieSocketLog = new PrintStream(socketLog.getOutputStream());
           sortieSocketLog.println(stringToLog); // on envoie la chaine au serveur Log
-          this.logger(); // Le logger est éffectué ici (ce qui n'est pas vraiment une bonne pratique)
+          this.logger(); // Le logger est éffectué ici
         }
       }
       // on ferme nous aussi la connexion
